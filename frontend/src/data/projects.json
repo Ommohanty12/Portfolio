@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "category": "AI Projects",
+        "title": "AI Chatbot Generator ",
+        "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+        "shortDescription": "A SaaS-based AI chatbot generator that creates customizable chatbots and provides embeddable script tags for seamless website integration.",
+        "whatItSolves": "Eliminates the need for businesses to build chatbots from scratch by allowing them to generate and deploy AI-powered chatbots instantly using their own knowledge base.",
+        "fullDescription": "Developed a full-stack AI chatbot generator platform where users can create custom chatbots by providing business details or knowledge base content. The system processes this data and generates a unique embeddable JavaScript script tag that users can integrate into any website. Once embedded, the chatbot can interact with visitors in real-time, providing automated responses based on the trained data. The platform follows a SaaS model with scalable backend architecture and a modern UI for smooth user experience.",
+        "techStack": [
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Gemini API"
+        ],
+        "skillsUsed": {
+            "Frontend": "React, Tailwind CSS, Framer Motion ",
+            "Backend": "Node.js, Express.js, REST API Development, Script Generation Logic",
+            "Database": "MongoDB ",
+            "AI Integration": "Gemini API"
+        },
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "githubLink": "https://github.com/example/ai-chatbot-generator"
+    },
+    {
+        "id": 2,
+        "category": "AI Projects",
+        "title": "AI Notes Generator ",
+        "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "shortDescription": "An AI-powered notes generator platform with a credit-based usage system, enabling users to generate structured notes instantly.",
+        "whatItSolves": "Helps students and professionals quickly generate high-quality notes without spending hours researching and writing, while controlling API usage through a credit-based system.",
+        "fullDescription": "Built a full-stack AI notes generation platform inspired by ChatGPT, where users can input topics or prompts and receive well-structured, AI-generated notes in real-time. Implemented a credit-based system to manage and limit usage, simulating real-world SaaS monetization models. The platform includes secure authentication, dynamic prompt handling, and a responsive UI for smooth interaction. Designed to be scalable and efficient with optimized API usage.",
+        "techStack": [
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Gemini API"
+        ],
+        "skillsUsed": {
+            "Frontend": "React, Tailwind CSS ",
+            "Backend": "Node.js, Express.js, REST APIs, Credit System Logic",
+            "Database": "MongoDB ",
+            "AI Integration": "Gemini API "
+        },
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "githubLink": "https://github.com/example/ai-notes-generator"
+    },
+    {
+        "id": 3,
+        "category": "Other Projects",
+        "title": "Portfolio v1",
+        "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+        "shortDescription": "My previous developer portfolio built with plain HTML, CSS, and JS.",
+        "whatItSolves": "Acted as my first digital footprint, establishing my online presence and serving as a central hub for prospective clients and employers before scaling to this newer build.",
+        "fullDescription": "The first version of my personal portfolio. It showcases static website building skills utilizing vanilla CSS and JS animations. While simple, it maintains a clean layout and serves as a testament to my growth.",
+        "techStack": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ],
+        "skillsUsed": {
+            "Frontend": "HTML, CSS, JS",
+            "Backend": "N/A",
+            "Database": "N/A"
+        },
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "githubLink": "https://github.com/example/portfolio-v1"
+    }
+]

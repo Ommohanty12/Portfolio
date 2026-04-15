@@ -1,0 +1,52 @@
+[
+  {
+    "id": "react",
+    "name": "React.js,HTML,CSS,JavaScript",
+    "category": "Frontend Development"
+  },
+  {
+    "id": "node",
+    "name": "Node.js / Express",
+    "category": "Backend Development"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "category": "Database"
+  },
+  {
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "category": "Styling"
+  },
+  {
+    "id": "framer",
+    "name": "Framer Motion",
+    "category": "Animation"
+  },
+  {
+    "id": "git",
+    "name": "Git & GitHub",
+    "category": "Version Control"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "Programming Language"
+  },
+  {
+    "id": "c",
+    "name": "C",
+    "category": "Programming Language"
+  },
+  {
+    "id": "cpp",
+    "name": "C++",
+    "category": "Programming Language"
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "category": "Programming Language"
+  }
+]
