@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import connectDB from "./config/connectDB.js"; // ✅ FIXED (DB capital)
+import connectDB from "./config/connectDB.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import contactRouter from "./routes/contact.route.js";
@@ -11,34 +11,31 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// Middlewares
+// ✅ CORS
 app.use(cors({
-  origin: "https://ombhai-nine.vercel.app",
+  origin: "https://ombhai-nine.vercel.app", // your frontend
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
+// ✅ Middlewares
 app.use(express.json());
 app.use(cookieParser());
 
-// Routes
-app.use("/api/contact", contactRouter);
+// ✅ Routes
+app.use("/contact", contactRouter); // 🔥 FIXED (removed /api)
 
-const __dirname = path.resolve();
+// ✅ Simple test route (VERY IMPORTANT for debugging)
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+// ❌ REMOVE frontend serving (NOT needed on Render)
+// (we deploy frontend separately on :contentReference[oaicite:0]{index=0})
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend/dist", "index.html"));
-  });
-}
-
-// Connect DB
+// ✅ Connect DB
 connectDB();
 
-// Start server
+// ✅ Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
 });
