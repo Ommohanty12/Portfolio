@@ -4,7 +4,6 @@ import connectDB from "./config/connectDB.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import contactRouter from "./routes/contact.route.js";
-import path from "path";
 
 dotenv.config();
 
@@ -13,7 +12,7 @@ const PORT = process.env.PORT || 8000;
 
 // ✅ CORS
 app.use(cors({
-  origin: "https://ombhai-nine.vercel.app", // your frontend
+  origin: "https://ombhai-nine.vercel.app",
   credentials: true,
 }));
 
@@ -21,14 +20,13 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-// ✅ Routes
-app.use("/contact", contactRouter); // 🔥 FIXED (removed /api)
-
-// ✅ Simple test route (VERY IMPORTANT for debugging)
-
+// ✅ ONLY ONE ROUTE (IMPORTANT)
 app.use("/", contactRouter);
-// ❌ REMOVE frontend serving (NOT needed on Render)
-// (we deploy frontend separately on :contentReference[oaicite:0]{index=0})
+
+// ✅ Test route
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
 // ✅ Connect DB
 connectDB();
