@@ -26,7 +26,7 @@ contactRouter.get("/message", async (req, res) => {
 });
 
 // ✅ DELETE → delete message
-contactRouter.delete("/:id", async (req, res) => {
+router.delete("/message/:id", async (req, res) => {
   try {
     const deletedMessage = await Contact.findByIdAndDelete(req.params.id);
 

@@ -40,7 +40,7 @@ const Messages = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`${API_URL}/${id}`, {
+      const res = await fetch(`${API_URL}/message/${id}`, {
         method: "DELETE",
       });
 
