@@ -56,6 +56,7 @@ const Messages = () => {
     }
   };
 
+
   useEffect(() => {
     if (auth) {
       fetchMessages();
