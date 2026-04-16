@@ -4,11 +4,11 @@ import Contact from "../models/contact.model.js";
 
 const contactRouter = express.Router();
 
-// ✅ POST (save message)
+// ✅ POST → send message
 contactRouter.post("/", contactconcept);
 
-// ✅ GET (fetch all messages)
-contactRouter.get("/", async (req, res) => {
+// ✅ GET → fetch all messages
+contactRouter.get("/message", async (req, res) => {
   try {
     const messages = await Contact.find().sort({ createdAt: -1 });
 
@@ -25,17 +25,28 @@ contactRouter.get("/", async (req, res) => {
   }
 });
 
-// ✅ DELETE (remove a message)
+// ✅ DELETE → delete message
 contactRouter.delete("/:id", async (req, res) => {
   try {
     const deletedMessage = await Contact.findByIdAndDelete(req.params.id);
+
     if (!deletedMessage) {
-      return res.status(404).json({ success: false, error: "Message not found" });
+      return res.status(404).json({
+        success: false,
+        error: "Message not found",
+      });
     }
-    res.status(200).json({ success: true, message: "Message deleted" });
+
+    res.status(200).json({
+      success: true,
+      message: "Message deleted",
+    });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, error: "Failed to delete message" });
+    res.status(500).json({
+      success: false,
+      error: "Failed to delete message",
+    });
   }
 });
 

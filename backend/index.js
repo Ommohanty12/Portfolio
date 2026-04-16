@@ -25,10 +25,8 @@ app.use(cookieParser());
 app.use("/contact", contactRouter); // 🔥 FIXED (removed /api)
 
 // ✅ Simple test route (VERY IMPORTANT for debugging)
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
-});
 
+app.use("/", contactRouter);
 // ❌ REMOVE frontend serving (NOT needed on Render)
 // (we deploy frontend separately on :contentReference[oaicite:0]{index=0})
 
