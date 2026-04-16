@@ -10,29 +10,31 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// ✅ CORS
+// ✅ CORS (FINAL)
 app.use(cors({
-  origin: ["https://ombhai07.vercel.app"],
-  methods: ["GET", "POST", "DELETE"],
-  credentials: true,
+  origin: "https://ombhai07.vercel.app",
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
 }));
+
+app.options("*", cors());
 
 // ✅ Middlewares
 app.use(express.json());
 app.use(cookieParser());
-
-// ✅ ONLY ONE ROUTE (IMPORTANT)
-app.use("/", contactRouter);
 
 // ✅ Test route
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
-// ✅ Connect DB
+// ✅ Routes
+app.use("/", contactRouter);
+
+// ✅ DB
 connectDB();
 
-// ✅ Start server
+// ✅ Server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
 });
