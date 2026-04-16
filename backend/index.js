@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8000;
 
 // ✅ CORS
 app.use(cors({
-  origin: ["https://ombhai-nine.vercel.app"],
+  origin: ["https://ombhai07.vercel.app"],
   methods: ["GET", "POST", "DELETE"],
   credentials: true,
 }));
