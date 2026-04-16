@@ -29,7 +29,7 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const res = await fetch('https://portfolio-d0m7.onrender.com/contact', {
+            const res = await fetch('https://portfolio-1-ekza.onrender.com/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
