@@ -26,7 +26,7 @@ const Skills = () => {
                         <Cpu size={16} />
                         <span>Technical Expertise</span>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
                         Skills & Capabilities
                     </h2>
                     <p className="text-gray-400 mb-8 leading-relaxed text-sm sm:text-base">

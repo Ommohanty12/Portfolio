@@ -17,7 +17,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Plus Jakarta Sans', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
+        display: ['Plus Jakarta Sans', 'Playfair Display', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
       },
       boxShadow: {

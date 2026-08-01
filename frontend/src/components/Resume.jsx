@@ -4,7 +4,7 @@ import { Download, ExternalLink, FileText, CheckCircle2, Briefcase, GraduationCa
 
 const Resume = () => {
     const [pdfError, setPdfError] = useState(false);
-    const resumeUrl = '/resume.pdf';
+    const resumeUrl = '/assets/resume/Om_Mohanty_Resume.pdf';
 
     const highlights = [
         { title: 'Experience', detail: 'Full Stack & AI Engineer building scalable web apps and microservices' },
@@ -29,8 +29,8 @@ const Resume = () => {
                         <FileText size={16} />
                         <span>Curriculum Vitae</span>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-                        Resume
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
+                        Resume & Background
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         Explore my professional background, technical expertise, and career accomplishments. Download a copy or view the interactive preview below.

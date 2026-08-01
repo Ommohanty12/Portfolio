@@ -102,11 +102,11 @@ const Contact = () => {
                         <MessageSquare size={16} />
                         <span>Get In Touch</span>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
                         Let's Work Together
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-                        Have a project in mind, a potential opportunity, or just want to connect? Reach out using the form or connect instantly via WhatsApp!
+                        Have a project in mind or a potential opportunity? Send a direct email or connect instantly via WhatsApp below.
                     </p>
                 </motion.div>
 

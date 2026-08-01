@@ -26,8 +26,8 @@ const Hero = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.08] tracking-tight font-display">
-                        I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-100 to-gray-400">Om Mohanty</span>
+                    <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-editorial-serif font-bold text-white leading-[1.05] tracking-tight">
+                        I'm <span className="italic font-normal bg-clip-text text-transparent bg-gradient-to-r from-amber-100 via-white to-gray-300">Om Mohanty</span>
                     </h1>
 
                     {/* Subtitle / Role */}
