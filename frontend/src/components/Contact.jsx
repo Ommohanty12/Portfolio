@@ -76,7 +76,7 @@ const Contact = () => {
 
         const name = waName.trim() || 'Visitor';
         const customMessage = waMessage.trim() || 'I would like to discuss a project with you.';
-        const phoneNumber = '917846931505';
+        const phoneNumber = '917903669654';
 
         const fullMessage = `Hello Om,\n\nMy name is ${name}.\n\n${customMessage}\n\nI visited your portfolio and would like to connect with you regarding a project.\n\nThanks!`;
 
