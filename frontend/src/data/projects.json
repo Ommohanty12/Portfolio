@@ -1,73 +1,124 @@
 [
     {
         "id": 1,
-        "category": "AI Projects",
-        "title": "AI Chatbot Generator ",
+        "category": "AI SaaS",
+        "title": "AI Chatbot Generator",
         "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+        "gallery": [
+            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop"
+        ],
         "shortDescription": "A SaaS-based AI chatbot generator that creates customizable chatbots and provides embeddable script tags for seamless website integration.",
         "whatItSolves": "Eliminates the need for businesses to build chatbots from scratch by allowing them to generate and deploy AI-powered chatbots instantly using their own knowledge base.",
-        "fullDescription": "Developed a full-stack AI chatbot generator platform where users can create custom chatbots by providing business details or knowledge base content. The system processes this data and generates a unique embeddable JavaScript script tag that users can integrate into any website. Once embedded, the chatbot can interact with visitors in real-time, providing automated responses based on the trained data. The platform follows a SaaS model with scalable backend architecture and a modern UI for smooth user experience.",
+        "fullDescription": "Developed a full-stack AI chatbot generator platform where users can create custom chatbots by providing business details or knowledge base content.\n\nThe system processes this data and generates a unique embeddable JavaScript script tag that users can integrate into any website. Once embedded, the chatbot can interact with visitors in real-time, providing automated responses based on trained knowledge.\n\nThe platform follows a SaaS architecture with scalable Node.js microservices, JWT authentication, and a modern reactive UI.",
         "techStack": [
             "React",
-            "Tailwind CSS",
+            "Next.js",
             "Node.js",
-            "Express.js",
+            "Express",
             "MongoDB",
+            "Tailwind CSS",
             "Gemini API"
         ],
         "skillsUsed": {
-            "Frontend": "React, Tailwind CSS, Framer Motion ",
-            "Backend": "Node.js, Express.js, REST API Development, Script Generation Logic",
-            "Database": "MongoDB ",
-            "AI Integration": "Gemini API"
+            "Frontend": "React, Tailwind CSS, Framer Motion",
+            "Backend": "Node.js, Express.js, REST API, Embed Scripts",
+            "Database": "MongoDB Atlas",
+            "AI Integration": "Google Gemini API"
         },
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
-        "githubLink": "https://github.com/example/ai-chatbot-generator"
+        "liveDemo": "https://aichatbot-generator.vercel.app",
+        "githubLink": "https://github.com/Ommohanty12/ai-chatbot-generator",
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
     },
     {
         "id": 2,
-        "category": "AI Projects",
-        "title": "AI Notes Generator ",
+        "category": "AI Application",
+        "title": "AI Notes Generator",
         "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "gallery": [
+            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
+        ],
         "shortDescription": "An AI-powered notes generator platform with a credit-based usage system, enabling users to generate structured notes instantly.",
         "whatItSolves": "Helps students and professionals quickly generate high-quality notes without spending hours researching and writing, while controlling API usage through a credit-based system.",
-        "fullDescription": "Built a full-stack AI notes generation platform inspired by ChatGPT, where users can input topics or prompts and receive well-structured, AI-generated notes in real-time. Implemented a credit-based system to manage and limit usage, simulating real-world SaaS monetization models. The platform includes secure authentication, dynamic prompt handling, and a responsive UI for smooth interaction. Designed to be scalable and efficient with optimized API usage.",
+        "fullDescription": "Built a full-stack AI notes generation platform inspired by ChatGPT, where users can input topics or prompts and receive well-structured, AI-generated notes in real-time.\n\nImplemented a credit-based system to manage and limit usage, simulating real-world SaaS monetization models. The platform includes secure authentication, dynamic prompt handling, markdown rendering, and export to PDF features.",
         "techStack": [
             "React",
             "Tailwind CSS",
             "Node.js",
-            "Express.js",
+            "Express",
             "MongoDB",
-            "Gemini API"
+            "Gemini API",
+            "Firebase"
         ],
         "skillsUsed": {
-            "Frontend": "React, Tailwind CSS ",
-            "Backend": "Node.js, Express.js, REST APIs, Credit System Logic",
-            "Database": "MongoDB ",
-            "AI Integration": "Gemini API "
+            "Frontend": "React, Tailwind CSS, Markdown Parser",
+            "Backend": "Node.js, Express.js, Credit Billing Logic",
+            "Database": "MongoDB",
+            "AI Integration": "Gemini 1.5 Pro API"
         },
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
-        "githubLink": "https://github.com/example/ai-notes-generator"
+        "liveDemo": "https://ainotes-gen.vercel.app",
+        "githubLink": "https://github.com/Ommohanty12/ai-notes-generator",
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
     },
     {
         "id": 3,
-        "category": "Other Projects",
+        "category": "Full Stack",
+        "title": "CodeCraft AI IDE & Code Assistant",
+        "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+        "gallery": [
+            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
+        ],
+        "shortDescription": "A web-based intelligent code editor with real-time AI code completion, bug fixing, and automated code review.",
+        "whatItSolves": "Accelerates developer workflow by providing instant context-aware code suggestions, syntax debugging, and security audit reports inside a browser-based Monaco editor.",
+        "fullDescription": "CodeCraft is an online code studio integrating Monaco Editor with LLMs for real-time code completion, refactoring, and automated test generation.\n\nSupports multiple languages including JavaScript, TypeScript, Python, and Go, featuring live execution sandboxes and syntax highlighting with sleek glassmorphic controls.",
+        "techStack": [
+            "React",
+            "Monaco Editor",
+            "Node.js",
+            "Express",
+            "Docker",
+            "Tailwind CSS"
+        ],
+        "skillsUsed": {
+            "Frontend": "React, Monaco Editor, Tailwind CSS",
+            "Backend": "Node.js, Code Execution Sandbox",
+            "Database": "Redis, MongoDB",
+            "AI Integration": "LLM Code Completion Engine"
+        },
+        "liveDemo": "https://codecraft-ide.vercel.app",
+        "githubLink": "https://github.com/Ommohanty12/codecraft-ai-ide",
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+        "id": 4,
+        "category": "Web Development",
         "title": "Portfolio v1",
         "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+        "gallery": [
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
+        ],
         "shortDescription": "My previous developer portfolio built with plain HTML, CSS, and JS.",
         "whatItSolves": "Acted as my first digital footprint, establishing my online presence and serving as a central hub for prospective clients and employers before scaling to this newer build.",
-        "fullDescription": "The first version of my personal portfolio. It showcases static website building skills utilizing vanilla CSS and JS animations. While simple, it maintains a clean layout and serves as a testament to my growth.",
+        "fullDescription": "The first version of my personal portfolio. It showcases static website building skills utilizing vanilla CSS and JS animations.\n\nWhile simple, it maintains a clean layout and serves as a testament to my engineering evolution over time.",
         "techStack": [
             "HTML5",
             "CSS3",
             "JavaScript"
         ],
         "skillsUsed": {
-            "Frontend": "HTML, CSS, JS",
+            "Frontend": "HTML5, CSS3, JavaScript",
             "Backend": "N/A",
             "Database": "N/A"
         },
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4",
-        "githubLink": "https://github.com/example/portfolio-v1"
+        "liveDemo": "https://ommohanty-v1.netlify.app",
+        "githubLink": "https://github.com/Ommohanty12/portfolio-v1",
+        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
     }
 ]

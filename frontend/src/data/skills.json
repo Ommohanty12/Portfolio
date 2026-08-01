@@ -1,52 +1,52 @@
 [
   {
     "id": "react",
-    "name":"Reactjs",
-    "category": "Frontend Development"
+    "name": "React & React Native",
+    "category": "Frontend Framework"
+  },
+  {
+    "id": "next",
+    "name": "Next.js (App Router)",
+    "category": "Full Stack Framework"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category": "Language"
   },
   {
     "id": "node",
-    "name": "Node.js / Express",
-    "category": "Backend Development"
+    "name": "Node.js & Express",
+    "category": "Backend Runtime"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini & LLM APIs",
+    "category": "AI Integration"
   },
   {
     "id": "mongodb",
-    "name": "MongoDB",
-    "category": "Database"
+    "name": "MongoDB & Mongoose",
+    "category": "NoSQL Database"
   },
   {
     "id": "tailwind",
     "name": "Tailwind CSS",
-    "category": "Styling"
+    "category": "UI Design System"
   },
   {
-    "id": "framer",
-    "name": "Framer Motion",
-    "category": "Animation"
-  },
-  {
-    "id": "git",
-    "name": "Git & GitHub",
-    "category": "Version Control"
-  },
-  {
-    "id": "python",
-    "name": "Python",
-    "category": "Programming Language"
-  },
-  {
-    "id": "c",
-    "name": "C",
-    "category": "Programming Language"
+    "id": "systemdesign",
+    "name": "System Architecture",
+    "category": "Engineering"
   },
   {
     "id": "cpp",
-    "name": "C++",
-    "category": "Programming Language"
+    "name": "C++ & Data Structures",
+    "category": "Core CS"
   },
   {
-    "id": "java",
-    "name": "Java",
-    "category": "Programming Language"
+    "id": "git",
+    "name": "Git & CI/CD",
+    "category": "DevOps & Tools"
   }
 ]

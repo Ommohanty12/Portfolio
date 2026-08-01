@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-dark text-gray-200 font-sans antialiased overflow-x-hidden;
+    @apply bg-dark text-gray-200 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
   }
 }
 
@@ -17,6 +19,7 @@ html {
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,14 +27,42 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary rounded-full;
+  @apply bg-primary/70 rounded-full hover:bg-primary transition-colors;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-accent;
-}
-
-/* Glassmorphism utility */
+/* Glassmorphism utilities */
 .glass {
-  @apply bg-white/5 backdrop-blur-md border border-white/10;
+  @apply bg-white/[0.04] backdrop-blur-xl border border-white/10;
 }
+
+.glass-card {
+  @apply bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+/* Floating Label Form Field Utility */
+.floating-group {
+  @apply relative w-full;
+}
+
+.floating-input {
+  @apply block w-full px-4 pt-6 pb-2 text-white bg-darker/60 border border-white/10 rounded-xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 text-sm sm:text-base placeholder-transparent;
+}
+
+.floating-label {
+  @apply absolute left-4 top-2 text-xs font-medium text-gray-400 pointer-events-none transition-all duration-200 transform origin-[0_0];
+}
+
+.floating-input:placeholder-shown + .floating-label {
+  @apply text-sm text-gray-500 top-4;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+  @apply top-2 text-xs text-primary font-semibold;
+}
+
+/* Tech badge styling */
+.tech-badge {
+  @apply inline-flex items-center px-3 py-1 text-xs font-mono font-medium rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-primary/50 hover:text-primary transition-all duration-300 hover:scale-105;
+}
+
