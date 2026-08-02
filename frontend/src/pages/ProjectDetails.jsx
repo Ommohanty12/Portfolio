@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Code, PlayCircle, ExternalLink, Mail, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink, Mail, MessageCircle } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 const ProjectDetails = () => {
@@ -9,6 +9,7 @@ const ProjectDetails = () => {
     const navigate = useNavigate();
     const [project, setProject] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -18,6 +19,16 @@ const ProjectDetails = () => {
     }, [id, navigate]);
 
     if (!project) return null;
+
+    const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.thumbnail];
+
+    const handlePrev = () => {
+        setCurrentImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    };
+
+    const handleNext = () => {
+        setCurrentImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    };
 
     return (
         <motion.div
@@ -53,29 +64,69 @@ const ProjectDetails = () => {
                     </div>
                 </motion.div>
 
-                {/* Video Demo Area */}
+                {/* Main Photo Gallery Section */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="relative w-full aspect-video rounded-3xl overflow-hidden glass border border-white/10 mb-12 shadow-glow group"
+                    className="mb-12 space-y-4"
                 >
-                    {project.videoDemo ? (
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full h-full object-cover"
-                            poster={project.thumbnail}
-                        >
-                            <source src={project.videoDemo} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    ) : (
-                        <div className="w-full h-full flex flex-col items-center justify-center bg-dark text-gray-400">
-                            <PlayCircle size={64} className="mb-4 opacity-50" />
-                            <p>Demo video coming soon</p>
+                    <div className="relative w-full h-[280px] sm:h-[450px] md:h-[500px] rounded-3xl overflow-hidden glass border border-white/10 shadow-glow group bg-darker">
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={currentImgIndex}
+                                src={images[currentImgIndex]}
+                                alt={`${project.title} screenshot ${currentImgIndex + 1}`}
+                                initial={{ opacity: 0, scale: 1.03 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.97 }}
+                                transition={{ duration: 0.4 }}
+                                className="w-full h-full object-cover"
+                            />
+                        </AnimatePresence>
+
+                        {/* Navigation Arrows */}
+                        {images.length > 1 && (
+                            <>
+                                <button
+                                    onClick={handlePrev}
+                                    aria-label="Previous Image"
+                                    className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-darker/80 text-white flex items-center justify-center border border-white/20 backdrop-blur-md opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary shadow-lg pointer-events-auto"
+                                >
+                                    <ChevronLeft size={20} />
+                                </button>
+                                <button
+                                    onClick={handleNext}
+                                    aria-label="Next Image"
+                                    className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-darker/80 text-white flex items-center justify-center border border-white/20 backdrop-blur-md opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary shadow-lg pointer-events-auto"
+                                >
+                                    <ChevronRight size={20} />
+                                </button>
+
+                                {/* Photo Counter Badge */}
+                                <div className="absolute top-4 right-4 bg-darker/80 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-xs font-mono text-gray-300">
+                                    {currentImgIndex + 1} / {images.length}
+                                </div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Thumbnail Selector Strip */}
+                    {images.length > 1 && (
+                        <div className="flex items-center justify-center gap-3 overflow-x-auto py-2 px-1">
+                            {images.map((img, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => setCurrentImgIndex(idx)}
+                                    className={`relative w-20 sm:w-24 h-14 sm:h-16 rounded-xl overflow-hidden border-2 transition-all duration-300 shrink-0 ${
+                                        idx === currentImgIndex
+                                            ? 'border-primary scale-105 shadow-glow'
+                                            : 'border-white/10 opacity-60 hover:opacity-100 hover:border-white/30'
+                                    }`}
+                                >
+                                    <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                                </button>
+                            ))}
                         </div>
                     )}
                 </motion.div>

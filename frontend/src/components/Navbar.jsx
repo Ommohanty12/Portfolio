@@ -30,16 +30,19 @@ const Navbar = () => {
     const handleNavClick = (id) => {
         setIsOpen(false);
         if (location.pathname !== '/') {
-            navigate('/');
+            navigate('/', { state: { scrollTo: id } });
+        } else {
             setTimeout(() => {
                 scrollToSection(id);
-            }, 500);
-        } else {
-            scrollToSection(id);
+            }, 50);
         }
     };
 
     const scrollToSection = (id) => {
+        if (id === 'home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
         const element = document.getElementById(id);
         if (element) {
             const topPos = element.getBoundingClientRect().top + window.scrollY;
@@ -47,8 +50,6 @@ const Navbar = () => {
                 top: topPos - 80,
                 behavior: 'smooth'
             });
-        } else if (id === 'home') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
