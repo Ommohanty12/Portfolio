@@ -6,12 +6,12 @@
   },
   {
     "id": "next",
-    "name": "Next.js (App Router)",
+    "name": "Next.js(Basics)",
     "category": "Full Stack Framework"
   },
   {
-    "id": "typescript",
-    "name": "TypeScript",
+    "id": "Javascript/Typescript(Basics)",
+    "name": "JavaScript/TypeScript",
     "category": "Language"
   },
   {
@@ -35,18 +35,13 @@
     "category": "UI Design System"
   },
   {
-    "id": "systemdesign",
-    "name": "System Architecture",
-    "category": "Engineering"
-  },
-  {
     "id": "cpp",
-    "name": "C++ & Data Structures",
-    "category": "Core CS"
+    "name": "C++ & Python",
+    "category": "Core CS and Python"
   },
   {
     "id": "git",
-    "name": "Git & CI/CD",
+    "name": "Deployment",
     "category": "DevOps & Tools"
   }
 ]

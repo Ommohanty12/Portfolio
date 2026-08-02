@@ -19,11 +19,6 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="flex-1 flex flex-col items-start text-left space-y-6"
                 >
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-primary shadow-glow">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-                        <span>Available for FAANG / MAANG & Product Roles</span>
-                    </div>
 
                     {/* Headline */}
                     <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-editorial-serif font-bold text-white leading-[1.05] tracking-tight">

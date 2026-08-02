@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, ExternalLink, Sparkles, Layers } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import projectsData from '../data/projects.json';
 
@@ -143,18 +142,6 @@ const ProjectCard = ({ project, index }) => {
                             <ExternalLink size={15} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                         </a>
                     )}
-
-                    {project.githubLink && (
-                        <a
-                            href={project.githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300 group/btn"
-                        >
-                            <FaGithub size={16} />
-                            <span>GitHub</span>
-                        </a>
-                    )}
                 </div>
 
                 <button
@@ -172,8 +159,8 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
     const [showAll, setShowAll] = useState(false);
 
-    // Requirement: Initially display only first 3 projects
-    const INITIAL_COUNT = 3;
+    // Requirement: Initially display at most 2 projects
+    const INITIAL_COUNT = 2;
     const displayedProjects = showAll ? projectsData : projectsData.slice(0, INITIAL_COUNT);
 
     return (
@@ -201,7 +188,7 @@ const Projects = () => {
                 </motion.div>
 
                 {/* Responsive Projects Grid */}
-                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <AnimatePresence>
                         {displayedProjects.map((project, index) => (
                             <ProjectCard key={project.id} project={project} index={index} />
