@@ -22,6 +22,11 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const triggerMailto = (name, email, subject, message) => {
+        const mailtoUrl = `mailto:ommohanty1210@gmail.com?subject=${encodeURIComponent(subject + ' (from ' + name + ')')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        window.location.href = mailtoUrl;
+    };
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
@@ -42,31 +47,41 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const res = await fetch('https://portfolio-1-ekza.onrender.com/', {
+            const res = await fetch('https://formsubmit.co/ajax/ommohanty1210@gmail.com', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    _subject: `Portfolio Contact: ${formData.subject}`,
+                    message: formData.message
+                })
             });
 
             const data = await res.json();
 
-            if (res.ok) {
+            if (res.ok || data.success === 'true' || data.success === true) {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
             } else {
-                setStatus('error');
-                setErrorMessage(data.error || 'Failed to send message.');
+                // Fallback to opening mail client
+                triggerMailto(formData.name, formData.email, formData.subject, formData.message);
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
             }
         } catch (error) {
-            console.error(error);
-            setStatus('error');
-            setErrorMessage('Network error. Failed to connect to server.');
+            console.error("Form submission error:", error);
+            // Fallback to opening mail client if network/API blocked
+            triggerMailto(formData.name, formData.email, formData.subject, formData.message);
+            setStatus('success');
+            setFormData({ name: '', email: '', subject: '', message: '' });
         }
 
         setTimeout(() => {
-            if (status !== 'loading') setStatus('idle');
+            setStatus('idle');
         }, 6000);
     };
 

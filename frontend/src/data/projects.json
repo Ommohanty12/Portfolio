@@ -1,46 +1,48 @@
 [
-    {
-        "id": 1,
-        "category": "AI SaaS",
-        "title": "AI Chatbot Generator",
-        "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
-        "gallery": [
-            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop"
-        ],
-        "shortDescription": "A SaaS-based AI chatbot generator that creates customizable chatbots and provides embeddable script tags for seamless website integration.",
-        "whatItSolves": "Eliminates the need for businesses to build chatbots from scratch by allowing them to generate and deploy AI-powered chatbots instantly using their own knowledge base.",
-        "fullDescription": "Developed a full-stack AI chatbot generator platform where users can create custom chatbots by providing business details or knowledge base content.\n\nThe system processes this data and generates a unique embeddable JavaScript script tag that users can integrate into any website. Once embedded, the chatbot can interact with visitors in real-time, providing automated responses based on trained knowledge.\n\nThe platform follows a SaaS architecture with scalable Node.js microservices, JWT authentication, and a modern reactive UI.",
-        "techStack": [
-            "React",
-            "Next.js",
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "Tailwind CSS",
-            "Gemini API"
-        ],
-        "skillsUsed": {
-            "Frontend": "React, Tailwind CSS, Framer Motion",
-            "Backend": "Node.js, Express.js, REST API, Embed Scripts",
-            "Database": "MongoDB Atlas",
-            "AI Integration": "Google Gemini API"
-        },
-        "liveDemo": "https://aichatbot-generator.vercel.app",
-        "githubLink": "https://github.com/Ommohanty12/ai-chatbot-generator",
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
+   {
+    "id": 1,
+    "category": "AI Application",
+    "title": "omUI (AI Component Library)",
+    "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+    "gallery": [
+        "/gallery/01/0101.png",
+        "/gallery/01/0102.png",
+        "/gallery/01/0103.png",
+        "/gallery/01/0104.png",
+        "/gallery/01/0105.png"
+    ],
+    "shortDescription": "A modern AI-powered React component library that provides beautifully designed, customizable UI components developers can download and integrate into their projects within minutes.",
+
+    "whatItSolves": "Saves developers hours of UI development by offering production-ready, responsive, and reusable components that can be easily installed, customized, and integrated into any React application.",
+
+    "fullDescription": "Developed omUI, a modern AI-powered component library designed to accelerate frontend development. The platform provides a growing collection of professionally crafted React components, including buttons, cards, forms, navigation bars, modals, dashboards, animations, and more.\n\nDevelopers can browse components, preview them in real time, copy the source code or install the library directly into their projects. Every component is responsive, customizable, and built with clean, reusable code, enabling faster development without sacrificing design quality.\n\nThe platform focuses on delivering a seamless developer experience with modern UI patterns, comprehensive documentation, and easy integration into existing React applications.",
+
+    "techStack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "Framer Motion",
+        "JavaScript"
+    ],
+
+    "skillsUsed": {
+        "Frontend": "React, Tailwind CSS, Framer Motion",
+        "Backend": "Node.js, Express.js, REST API",
+        "Database": "MongoDB Atlas",
+        "Developer Experience": "Reusable Components, Documentation, Package Distribution"
     },
+
+    "liveDemo": "https://omui-1.onrender.com/"
+},
     {
         "id": 2,
         "category": "AI Application",
-        "title": "AI Notes Generator",
+        "title": "OMEX AI(AI Notes generator)",
         "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
         "gallery": [
-            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
+          "/gallery/02/0201.png"
         ],
         "shortDescription": "An AI-powered notes generator platform with a credit-based usage system, enabling users to generate structured notes instantly.",
         "whatItSolves": "Helps students and professionals quickly generate high-quality notes without spending hours researching and writing, while controlling API usage through a credit-based system.",
@@ -55,70 +57,48 @@
             "Firebase"
         ],
         "skillsUsed": {
-            "Frontend": "React, Tailwind CSS, Markdown Parser",
-            "Backend": "Node.js, Express.js, Credit Billing Logic",
+            "Frontend": "React, Tailwind CSS",
+            "Backend": "Node.js, Express.js",
             "Database": "MongoDB",
-            "AI Integration": "Gemini 1.5 Pro API"
+            "AI Integration": "Gemini API"
         },
-        "liveDemo": "https://ainotes-gen.vercel.app",
-        "githubLink": "https://github.com/Ommohanty12/ai-notes-generator",
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
+        "liveDemo": "https://omex-ai-1.onrender.com/"
     },
-    {
-        "id": 3,
-        "category": "Full Stack",
-        "title": "CodeCraft AI IDE & Code Assistant",
-        "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-        "gallery": [
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
-        ],
-        "shortDescription": "A web-based intelligent code editor with real-time AI code completion, bug fixing, and automated code review.",
-        "whatItSolves": "Accelerates developer workflow by providing instant context-aware code suggestions, syntax debugging, and security audit reports inside a browser-based Monaco editor.",
-        "fullDescription": "CodeCraft is an online code studio integrating Monaco Editor with LLMs for real-time code completion, refactoring, and automated test generation.\n\nSupports multiple languages including JavaScript, TypeScript, Python, and Go, featuring live execution sandboxes and syntax highlighting with sleek glassmorphic controls.",
-        "techStack": [
-            "React",
-            "Monaco Editor",
-            "Node.js",
-            "Express",
-            "Docker",
-            "Tailwind CSS"
-        ],
-        "skillsUsed": {
-            "Frontend": "React, Monaco Editor, Tailwind CSS",
-            "Backend": "Node.js, Code Execution Sandbox",
-            "Database": "Redis, MongoDB",
-            "AI Integration": "LLM Code Completion Engine"
-        },
-        "liveDemo": "https://codecraft-ide.vercel.app",
-        "githubLink": "https://github.com/Ommohanty12/codecraft-ai-ide",
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
+   {
+    "id": 3,
+    "category": "AI Application",
+    "title": "omAI",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+    "gallery": [
+        "/gallery/03/0301.png",
+        "/gallery/03/0302.png",
+        "/gallery/03/0303.png",
+        "/gallery/03/0304.png"
+    ],
+    "shortDescription": "An AI-powered chatbot generator that creates customizable business chatbots and provides an embeddable script tag for seamless website integration.",
+
+    "whatItSolves": "Helps businesses deploy AI customer support without building a chatbot from scratch by generating a ready-to-use chatbot that can be embedded into any website using a single script tag.",
+
+    "fullDescription": "Developed a full-stack AI chatbot generator that enables businesses to create intelligent, customizable chatbots by providing their company details, FAQs, or knowledge base. The platform processes this information using AI and generates a unique embeddable JavaScript script tag.\n\nBy simply adding the generated script tag to any company website, the chatbot is instantly integrated and can answer customer queries based on the provided business information. The platform features secure authentication, scalable backend services, real-time AI responses, and an intuitive dashboard for managing chatbot configurations.",
+
+    "techStack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "OpenRouter API",
+        "Firebase"
+    ],
+
+    "skillsUsed": {
+        "Frontend": "React, Tailwind CSS, Framer Motion",
+        "Backend": "Node.js, Express.js, REST API, Script Generation",
+        "Database": "MongoDB Atlas",
+        "AI Integration": "OpenRouter API, Prompt Engineering",
+        "Authentication": "Firebase Authentication"
     },
-    {
-        "id": 4,
-        "category": "Web Development",
-        "title": "Portfolio v1",
-        "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
-        "gallery": [
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
-        ],
-        "shortDescription": "My previous developer portfolio built with plain HTML, CSS, and JS.",
-        "whatItSolves": "Acted as my first digital footprint, establishing my online presence and serving as a central hub for prospective clients and employers before scaling to this newer build.",
-        "fullDescription": "The first version of my personal portfolio. It showcases static website building skills utilizing vanilla CSS and JS animations.\n\nWhile simple, it maintains a clean layout and serves as a testament to my engineering evolution over time.",
-        "techStack": [
-            "HTML5",
-            "CSS3",
-            "JavaScript"
-        ],
-        "skillsUsed": {
-            "Frontend": "HTML5, CSS3, JavaScript",
-            "Backend": "N/A",
-            "Database": "N/A"
-        },
-        "liveDemo": "https://ommohanty-v1.netlify.app",
-        "githubLink": "https://github.com/Ommohanty12/portfolio-v1",
-        "videoDemo": "https://www.w3schools.com/html/mov_bbb.mp4"
-    }
+
+    "liveDemo": "https://om-ai-three.vercel.app/"
+}
 ]
