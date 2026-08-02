@@ -5,15 +5,9 @@ import { SiLeetcode, SiHackerrank, SiCodechef, SiGeeksforgeeks } from 'react-ico
 
 const socialPlatforms = [
     { name: 'GitHub', icon: FaGithub, url: 'https://github.com/Ommohanty12', color: 'hover:text-white hover:border-white shadow-glow' },
-    { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/in/om-mohanty', color: 'hover:text-blue-400 hover:border-blue-400' },
-    { name: 'X (Twitter)', icon: FaXTwitter, url: 'https://x.com/ommohanty', color: 'hover:text-sky-400 hover:border-sky-400' },
+    { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/in/om-mohanty-96b200323', color: 'hover:text-blue-400 hover:border-blue-400' },
     { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com/ommohanty', color: 'hover:text-pink-500 hover:border-pink-500' },
     { name: 'Email', icon: FaEnvelope, url: 'mailto:ommohanty1210@gmail.com?subject=Contact from Portfolio', color: 'hover:text-primary hover:border-primary' },
-    { name: 'WhatsApp', icon: FaWhatsapp, url: 'https://wa.me/917846931505', color: 'hover:text-emerald-400 hover:border-emerald-400' },
-    { name: 'LeetCode', icon: SiLeetcode, url: 'https://leetcode.com/u/Ommohanty12/', color: 'hover:text-amber-500 hover:border-amber-500' },
-    { name: 'HackerRank', icon: SiHackerrank, url: 'https://hackerrank.com/ommohanty', color: 'hover:text-emerald-500 hover:border-emerald-500' },
-    { name: 'CodeChef', icon: SiCodechef, url: 'https://codechef.com/users/ommohanty', color: 'hover:text-amber-700 hover:border-amber-700' },
-    { name: 'GeeksforGeeks', icon: SiGeeksforgeeks, url: 'https://geeksforgeeks.org/user/ommohanty', color: 'hover:text-green-500 hover:border-green-500' },
 ];
 
 const Footer = () => {

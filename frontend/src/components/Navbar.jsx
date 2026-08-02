@@ -101,7 +101,7 @@ const Navbar = () => {
                         <FaGithub size={15} />
                     </a>
                     <a
-                        href="https://linkedin.com/in/om-mohanty"
+                        href="https://linkedin.com/in/om-mohanty-96b200323"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -110,7 +110,7 @@ const Navbar = () => {
                         <FaLinkedin size={15} />
                     </a>
                     <a
-                        href="https://wa.me/917846931505"
+                        href="https://wa.me/918969430367"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="WhatsApp"
