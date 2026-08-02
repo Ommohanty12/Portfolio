@@ -4,7 +4,7 @@ import { Download, ExternalLink, FileText, CheckCircle2, Briefcase, GraduationCa
 
 const Resume = () => {
     const [pdfError, setPdfError] = useState(false);
-    const resumeUrl = '/assets/resume/Om_Mohanty_Resume.pdf';
+    const resumeUrl = '/assets/resume/Om_Mohanty.pdf';
 
     const highlights = [
         { title: 'Experience', detail: 'Full Stack & AI Engineer building scalable web apps and microservices' },
