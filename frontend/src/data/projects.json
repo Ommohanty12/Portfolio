@@ -3,7 +3,7 @@
     "id": 1,
     "category": "AI Application",
     "title": "omUI (AI Component Library)",
-    "thumbnail": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+    "thumbnail": "/gallery/01/0101.png",
     "gallery": [
         "/gallery/01/0101.png",
         "/gallery/01/0102.png",
@@ -40,7 +40,7 @@
         "id": 2,
         "category": "AI Application",
         "title": "OMEX AI(AI Notes generator)",
-        "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "thumbnail": "/gallery/02/0201.png",
         "gallery": [
           "/gallery/02/0201.png"
         ],
@@ -68,7 +68,7 @@
     "id": 3,
     "category": "AI Application",
     "title": "omAI",
-    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+    "thumbnail": "/gallery/03/0301.png",
     "gallery": [
         "/gallery/03/0301.png",
         "/gallery/03/0302.png",
