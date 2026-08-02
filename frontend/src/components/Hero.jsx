@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Code2, Terminal } from 'lucide-react';
-import profile from '../assets/om.jpg';
+import profile from '../assets/om.png';
 
 const Hero = () => {
     return (
@@ -28,7 +28,7 @@ const Hero = () => {
                     {/* Subtitle / Role */}
                     <div className="flex flex-wrap items-center gap-3 text-gray-300 text-lg sm:text-xl font-medium">
                         <div className="w-10 h-[2px] bg-primary"></div>
-                        <span className="text-primary font-mono font-semibold">Full Stack & AI Engineer</span>
+                        <span className="text-primary font-mono font-semibold">Full Stack & AI Developer</span>
                     </div>
 
                     {/* Short Description */}
