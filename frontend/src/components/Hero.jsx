@@ -33,7 +33,7 @@ const Hero = () => {
 
                     {/* Main Headline with Red Pop (Hola! Soy Kevin Luna style) */}
                     <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black text-white leading-[1.02] tracking-tight">
-                        Helo! I'm <br className="hidden sm:inline" />
+                        Hello! I'm <br className="hidden sm:inline" />
                         <span className="text-primary underline decoration-white/20 decoration-wavy decoration-2">Om Mohanty</span>
                     </h1>
 
