@@ -7,25 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: '#111111',
+        dark: '#121212',
         darker: '#0a0a0a',
-        darkcard: '#161618',
-        primary: '#FF4500', // Dark Orange (OrangeRed)
-        secondary: '#CC3700', // Darker variation
-        accent: '#FF6333', // Lighter variation
-        graylight: '#888888',
+        darkcard: '#1a1a1a',
+        paper: '#F4F1EA',
+        paperdark: '#EBE7DE',
+        primary: '#FF3B00', // Fiery Vermillion Red (Kevin Luna theme signature)
+        secondary: '#D93000',
+        accent: '#FF5C26',
+        graylight: '#999999',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
-        display: ['Plus Jakarta Sans', 'Playfair Display', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
+        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(255, 69, 0, 0.35)',
-        'glow-lg': '0 0 35px rgba(255, 69, 0, 0.5)',
+        'glow': '0 0 25px rgba(255, 59, 0, 0.4)',
+        'glow-lg': '0 0 40px rgba(255, 59, 0, 0.6)',
         'glow-cyan': '0 0 20px rgba(6, 182, 212, 0.35)',
         'glow-green': '0 0 20px rgba(34, 197, 94, 0.35)',
+        'paper-shadow': '0 10px 30px rgba(0, 0, 0, 0.25)',
       }
     },
   },

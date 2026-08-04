@@ -102,7 +102,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 relative z-10 pointer-events-auto">
+        <section id="contact" className="py-24 relative z-10 pointer-events-auto bg-grid-pattern">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
@@ -113,12 +113,12 @@ const Contact = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <div className="flex justify-center items-center gap-2 mb-3 text-primary font-mono text-sm uppercase tracking-wider">
-                        <MessageSquare size={16} />
-                        <span>Get In Touch</span>
+                    <div className="inline-flex items-center justify-center gap-2 mb-4 px-3.5 py-1 rounded-md bg-white/5 border border-white/10 text-primary font-mono text-xs font-bold uppercase tracking-widest">
+                        <MessageSquare size={14} />
+                        <span>04 // GET IN TOUCH</span>
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
-                        Let's Work Together
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">
+                        Let's <span className="text-primary">Work Together</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         Have a project in mind or a potential opportunity? Send a direct email or connect instantly via WhatsApp below.
@@ -134,15 +134,15 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border border-white/10 relative overflow-hidden"
+                        className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border-2 border-white/10 relative overflow-hidden bg-darkcard/90 shadow-2xl"
                     >
                         <div className="flex items-center gap-3 mb-8 pb-4 border-b border-white/10">
                             <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
                                 <Mail size={20} />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-white">Send a Message</h3>
-                                <p className="text-xs text-gray-400 font-mono">Fill out the form below</p>
+                                <h3 className="text-xl font-display font-bold text-white uppercase tracking-wide">Send a Message</h3>
+                                <p className="text-xs text-primary font-mono font-bold uppercase tracking-wider">Direct Email Dispatch</p>
                             </div>
                         </div>
 
@@ -226,7 +226,7 @@ const Contact = () => {
                                 <motion.div
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="flex items-center gap-3 text-green-400 bg-green-500/10 p-4 rounded-xl border border-green-500/20 text-sm"
+                                    className="flex items-center gap-3 text-green-400 bg-green-500/10 p-4 rounded-xl border border-green-500/20 text-sm font-mono"
                                 >
                                     <CheckCircle2 size={18} className="shrink-0" />
                                     <span>Thank you! Your message has been sent successfully.</span>
@@ -237,7 +237,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={status === 'loading'}
-                                className="w-full py-4 px-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium rounded-xl shadow-glow hover:shadow-glow-lg transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60"
+                                className="w-full py-4 px-8 bg-primary hover:bg-secondary text-white font-mono font-bold uppercase tracking-wider rounded-xl shadow-glow hover:shadow-glow-lg transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60 border border-primary"
                             >
                                 {status === 'loading' ? (
                                     <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -257,7 +257,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border border-emerald-500/20 relative overflow-hidden bg-gradient-to-b from-emerald-950/20 via-darker to-darker shadow-2xl"
+                        className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border-2 border-emerald-500/30 relative overflow-hidden bg-gradient-to-b from-emerald-950/20 via-darkcard to-darkcard shadow-2xl"
                     >
                         {/* Ambient Green Glow */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[90px] pointer-events-none"></div>
@@ -268,11 +268,11 @@ const Contact = () => {
                                     <FaWhatsapp size={22} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white">Direct WhatsApp</h3>
-                                    <p className="text-xs text-emerald-400 font-mono">Instant Chat Widget</p>
+                                    <h3 className="text-xl font-display font-bold text-white uppercase tracking-wide">Direct WhatsApp</h3>
+                                    <p className="text-xs text-emerald-400 font-mono font-bold uppercase tracking-wider">Instant Chat Widget</p>
                                 </div>
                             </div>
-                            <span className="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                            <span className="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
                                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                                 Online
                             </span>
@@ -290,7 +290,7 @@ const Contact = () => {
                                     id="waName"
                                     value={waName}
                                     onChange={(e) => setWaName(e.target.value)}
-                                    className="floating-input border-emerald-500/20 focus:border-emerald-500 focus:ring-emerald-500"
+                                    className="floating-input border-emerald-500/30 focus:border-emerald-500 focus:ring-emerald-500"
                                     placeholder="Your Name"
                                 />
                                 <label htmlFor="waName" className="floating-label">Your Name</label>
@@ -303,15 +303,15 @@ const Contact = () => {
                                     value={waMessage}
                                     onChange={(e) => setWaMessage(e.target.value)}
                                     rows={4}
-                                    className="floating-input border-emerald-500/20 focus:border-emerald-500 focus:ring-emerald-500 resize-none"
+                                    className="floating-input border-emerald-500/30 focus:border-emerald-500 focus:ring-emerald-500 resize-none"
                                     placeholder="Custom Message (Optional)"
                                 />
                                 <label htmlFor="waMessage" className="floating-label">Custom Message (Optional)</label>
                             </div>
 
                             {/* Preview Card */}
-                            <div className="p-4 rounded-xl bg-darker/80 border border-white/10 text-xs font-mono text-gray-400 space-y-1">
-                                <p className="text-gray-500 uppercase tracking-wider">Generated Output Preview:</p>
+                            <div className="p-4 rounded-xl bg-darker/90 border border-white/10 text-xs font-mono text-gray-400 space-y-1">
+                                <p className="text-emerald-400 font-bold uppercase tracking-wider">Generated Output Preview:</p>
                                 <p className="text-gray-300 italic">
                                     "Hello Om, My name is {waName.trim() || '[Your Name]'}. {waMessage.trim() || '[Your Message]'} I visited your portfolio..."
                                 </p>
@@ -320,7 +320,7 @@ const Contact = () => {
                             {/* Chat on WhatsApp Button */}
                             <button
                                 type="submit"
-                                className="w-full py-4 px-8 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-medium rounded-xl shadow-glow-green transition-all duration-300 flex items-center justify-center gap-3 group"
+                                className="w-full py-4 px-8 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-mono font-bold uppercase tracking-wider rounded-xl shadow-glow-green transition-all duration-300 flex items-center justify-center gap-3 group"
                             >
                                 <FaWhatsapp size={22} className="group-hover:scale-110 transition-transform" />
                                 <span>Chat on WhatsApp</span>

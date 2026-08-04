@@ -14,7 +14,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
+    @apply tracking-tight font-display;
   }
 }
 
@@ -22,11 +22,51 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Editorial Display Serif Title Style (Inspired by Gracious Bowing typography) */
+/* Editorial Serif & Display Typography */
 .font-editorial-serif {
   font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-weight: 600;
   letter-spacing: -0.02em;
+}
+
+/* Grid Pattern Overlay inspired by technical graph paper */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.bg-grid-paper {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(24, 24, 24, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(24, 24, 24, 0.08) 1px, transparent 1px);
+}
+
+/* Sticker badge outline effect */
+.sticker-tag {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider bg-white text-darker border-2 border-primary shadow-[3px_3px_0px_#FF3B00] transform -rotate-1 hover:rotate-0 transition-transform;
+}
+
+.sticker-tag-red {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider bg-primary text-white border-2 border-white shadow-[3px_3px_0px_#000] transform rotate-1 hover:rotate-0 transition-transform;
+}
+
+/* Custom Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 /* Custom Scrollbar */
@@ -43,13 +83,17 @@ html {
   @apply bg-primary/70 rounded-full hover:bg-primary transition-colors;
 }
 
-/* Glassmorphism utilities */
+/* Glassmorphism & Paper Card utilities */
 .glass {
   @apply bg-white/[0.04] backdrop-blur-xl border border-white/10 max-w-full;
 }
 
 .glass-card {
-  @apply bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-2xl max-w-full;
+  @apply bg-darkcard/90 backdrop-blur-xl border border-white/10 shadow-2xl max-w-full hover:border-primary/40 transition-all duration-300;
+}
+
+.paper-card {
+  @apply bg-paper text-darker border-2 border-darker/20 shadow-paper-shadow relative overflow-hidden;
 }
 
 /* Floating Label Form Field Utility */
@@ -58,7 +102,7 @@ html {
 }
 
 .floating-input {
-  @apply block w-full px-4 pt-6 pb-2 text-white bg-darker/60 border border-white/10 rounded-xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 text-sm sm:text-base placeholder-transparent box-border;
+  @apply block w-full px-4 pt-6 pb-2 text-white bg-darker/70 border border-white/15 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40 transition-all duration-200 text-sm sm:text-base placeholder-transparent box-border;
 }
 
 .floating-label {
@@ -76,7 +120,7 @@ html {
 
 /* Tech badge styling */
 .tech-badge {
-  @apply inline-flex items-center px-3 py-1 text-xs font-mono font-medium rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-primary/50 hover:text-primary transition-all duration-300 hover:scale-105;
+  @apply inline-flex items-center px-3 py-1 text-xs font-mono font-medium rounded-md bg-white/5 text-gray-300 border border-white/10 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-200;
 }
 
 

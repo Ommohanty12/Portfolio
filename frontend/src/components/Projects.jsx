@@ -27,11 +27,11 @@ const ProjectCard = ({ project, index }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="glass-card rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between group hover:border-primary/40 transition-all duration-500 shadow-xl"
+            className="glass-card rounded-3xl overflow-hidden border-2 border-white/10 flex flex-col justify-between group hover:border-primary transition-all duration-500 shadow-2xl bg-darkcard/90"
         >
             <div>
                 {/* Image Gallery / Carousel Section */}
-                <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-darker group/slider">
+                <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-darker group/slider">
                     <AnimatePresence mode="wait">
                         <motion.img
                             key={currentImgIndex}
@@ -47,11 +47,14 @@ const ProjectCard = ({ project, index }) => {
                     </AnimatePresence>
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-black/20 opacity-80 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-black/30 opacity-90 pointer-events-none"></div>
 
-                    {/* Category Badge Top Left */}
-                    <div className="absolute top-4 left-4 z-10">
-                        <span className="px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-darker/80 text-primary border border-primary/30 backdrop-blur-md">
+                    {/* Index & Category Badges Top Left & Right */}
+                    <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+                        <span className="px-3 py-1 rounded-md text-xs font-mono font-black bg-primary text-white uppercase tracking-wider">
+                            0{index + 1}
+                        </span>
+                        <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-darker/90 text-gray-200 border border-white/20 backdrop-blur-md">
                             {project.category}
                         </span>
                     </div>
@@ -62,14 +65,14 @@ const ProjectCard = ({ project, index }) => {
                             <button
                                 onClick={handlePrev}
                                 aria-label="Previous Image"
-                                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-darker/70 text-white flex items-center justify-center border border-white/10 backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary"
+                                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-darker/80 text-white flex items-center justify-center border border-white/20 backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary shadow-lg"
                             >
                                 <ChevronLeft size={18} />
                             </button>
                             <button
                                 onClick={handleNext}
                                 aria-label="Next Image"
-                                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-darker/70 text-white flex items-center justify-center border border-white/10 backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary"
+                                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-darker/80 text-white flex items-center justify-center border border-white/20 backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300 hover:bg-primary hover:border-primary shadow-lg"
                             >
                                 <ChevronRight size={18} />
                             </button>
@@ -100,7 +103,7 @@ const ProjectCard = ({ project, index }) => {
                     <div className="flex items-start justify-between gap-4">
                         <h3
                             onClick={() => navigate(`/project/${project.id}`)}
-                            className="text-2xl sm:text-3xl font-bold text-white group-hover:text-primary transition-colors cursor-pointer"
+                            className="text-2xl sm:text-3xl font-display font-black text-white group-hover:text-primary transition-colors cursor-pointer tracking-tight"
                         >
                             {project.title}
                         </h3>
@@ -113,13 +116,13 @@ const ProjectCard = ({ project, index }) => {
 
                     {/* Tech Badges */}
                     <div className="pt-2">
-                        <p className="text-xs font-mono uppercase text-gray-500 mb-2 flex items-center gap-1.5">
-                            <Layers size={14} className="text-primary" />
-                            <span>Tech Stack</span>
+                        <p className="text-xs font-mono uppercase font-bold text-primary mb-2.5 flex items-center gap-1.5 tracking-wider">
+                            <Layers size={14} />
+                            <span>TECH STACK</span>
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {project.techStack.map((tech, i) => (
-                                <span key={i} className="tech-badge">
+                                <span key={i} className="tech-badge font-mono">
                                     {tech}
                                 </span>
                             ))}
@@ -129,14 +132,14 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             {/* Bottom Actions Footer */}
-            <div className="p-6 sm:p-8 pt-0 flex flex-wrap items-center justify-between gap-4 border-t border-white/5 mt-4">
+            <div className="p-6 sm:p-8 pt-0 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 mt-4">
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                     {project.liveDemo && (
                         <a
                             href={project.liveDemo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium text-sm flex items-center justify-center gap-2 shadow-glow transition-all duration-300 group/btn"
+                            className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-primary hover:bg-secondary text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-glow transition-all duration-300 group/btn border border-primary"
                         >
                             <span>Live Demo</span>
                             <ExternalLink size={15} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -146,7 +149,7 @@ const ProjectCard = ({ project, index }) => {
 
                 <button
                     onClick={() => navigate(`/project/${project.id}`)}
-                    className="text-xs font-mono text-gray-400 hover:text-primary transition-colors flex items-center gap-1 ml-auto"
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400 hover:text-primary transition-colors flex items-center gap-1 ml-auto"
                 >
                     <span>View Case Study</span>
                     <ChevronRight size={14} />
@@ -164,7 +167,7 @@ const Projects = () => {
     const displayedProjects = showAll ? projectsData : projectsData.slice(0, INITIAL_COUNT);
 
     return (
-        <section id="projects" className="py-24 relative z-10">
+        <section id="projects" className="py-24 relative z-10 bg-grid-pattern">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
@@ -175,12 +178,12 @@ const Projects = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <div className="flex justify-center items-center gap-2 mb-3 text-primary font-mono text-sm uppercase tracking-wider">
-                        <Sparkles size={16} />
-                        <span>Featured Work</span>
+                    <div className="inline-flex items-center justify-center gap-2 mb-4 px-3.5 py-1 rounded-md bg-white/5 border border-white/10 text-primary font-mono text-xs font-bold uppercase tracking-widest">
+                        <Sparkles size={14} />
+                        <span>01 // FEATURED WORK</span>
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
-                        Featured Projects
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">
+                        Featured <span className="text-primary">Projects</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         A curated selection of AI applications, SaaS platforms, and full-stack web solutions engineered for performance, scale, and modern user experiences.
@@ -207,7 +210,7 @@ const Projects = () => {
                     >
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="flex items-center gap-3 px-8 py-3.5 rounded-full border border-primary/40 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-glow font-medium text-base group pointer-events-auto"
+                            className="flex items-center gap-3 px-8 py-3.5 rounded-xl border-2 border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-glow font-mono font-bold text-sm uppercase tracking-wider group pointer-events-auto"
                         >
                             <span>{showAll ? 'Show Less Projects' : 'See More Projects'}</span>
                             {showAll ? (

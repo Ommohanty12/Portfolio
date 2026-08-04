@@ -35,17 +35,17 @@ const ProjectDetails = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative z-10"
+            className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-grid-pattern"
         >
             <div className="max-w-5xl mx-auto">
                 <motion.button
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     onClick={() => navigate('/')}
-                    className="flex items-center gap-2 text-primary hover:text-white transition-colors mb-8 group pointer-events-auto"
+                    className="flex items-center gap-2 text-primary hover:text-white transition-colors mb-8 group pointer-events-auto font-mono font-bold text-xs uppercase tracking-wider"
                 >
-                    <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Portfolio
+                    <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+                    <span>Back to Portfolio</span>
                 </motion.button>
 
                 <motion.div
@@ -55,10 +55,10 @@ const ProjectDetails = () => {
                     className="mb-8"
                 >
                     <div className="flex flex-wrap items-center gap-4 mb-4">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white tracking-tight">
                             {project.title}
                         </h1>
-                        <span className="px-4 py-1.5 rounded-full text-sm font-medium bg-primary/20 text-primary border border-primary/30">
+                        <span className="px-4 py-1.5 rounded-md text-xs font-mono font-bold bg-primary text-white uppercase tracking-wider">
                             {project.category}
                         </span>
                     </div>
@@ -71,7 +71,7 @@ const ProjectDetails = () => {
                     transition={{ delay: 0.2 }}
                     className="mb-12 space-y-4"
                 >
-                    <div className="relative w-full h-[280px] sm:h-[450px] md:h-[500px] rounded-3xl overflow-hidden glass border border-white/10 shadow-glow group bg-darker">
+                    <div className="relative w-full h-[280px] sm:h-[450px] md:h-[500px] rounded-3xl overflow-hidden glass border-2 border-white/15 shadow-2xl group bg-darker">
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImgIndex}
@@ -104,7 +104,7 @@ const ProjectDetails = () => {
                                 </button>
 
                                 {/* Photo Counter Badge */}
-                                <div className="absolute top-4 right-4 bg-darker/80 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-xs font-mono text-gray-300">
+                                <div className="absolute top-4 right-4 bg-darker/80 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-xs font-mono font-bold text-gray-300">
                                     {currentImgIndex + 1} / {images.length}
                                 </div>
                             </>
@@ -140,7 +140,7 @@ const ProjectDetails = () => {
                         className="md:col-span-2 space-y-8"
                     >
                         <div>
-                            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Project Overview</h2>
+                            <h2 className="text-xl sm:text-2xl font-display font-black text-white mb-4 uppercase tracking-wide">Project Overview</h2>
                             <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">
                                 {project.fullDescription}
                             </p>
@@ -148,8 +148,8 @@ const ProjectDetails = () => {
                         
                         {project.whatItSolves && (
                             <div>
-                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-primary">What It Solves</h2>
-                                <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line bg-white/5 p-6 rounded-2xl border border-white/10">
+                                <h2 className="text-xl sm:text-2xl font-display font-black text-primary mb-4 uppercase tracking-wide">What It Solves</h2>
+                                <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line bg-darkcard p-6 rounded-2xl border-2 border-white/10 shadow-xl">
                                     {project.whatItSolves}
                                 </p>
                             </div>
@@ -163,14 +163,14 @@ const ProjectDetails = () => {
                         transition={{ delay: 0.4 }}
                         className="space-y-8"
                     >
-                        <div className="glass p-6 rounded-2xl border border-white/10 shadow-lg">
-                            <h3 className="text-xl font-bold text-white mb-6">Technologies Used</h3>
+                        <div className="glass p-6 rounded-2xl border-2 border-white/10 shadow-xl bg-darkcard/90">
+                            <h3 className="text-xl font-display font-black text-white mb-6 uppercase tracking-wide">Technologies Used</h3>
 
                             <div className="space-y-4">
                                 {Object.entries(project.skillsUsed).map(([category, skills]) => (
                                     <div key={category} className="border-b border-white/10 last:border-0 pb-4 last:pb-0">
-                                        <h4 className="text-sm font-medium text-primary mb-2 uppercase tracking-wider">{category}</h4>
-                                        <p className="text-sm text-gray-300 flex items-start gap-2">
+                                        <h4 className="text-xs font-mono font-bold text-primary mb-2 uppercase tracking-widest">{category}</h4>
+                                        <p className="text-sm text-gray-300 flex items-start gap-2 font-sans">
                                             {skills}
                                         </p>
                                     </div>
@@ -180,10 +180,10 @@ const ProjectDetails = () => {
 
                         <button
                             onClick={() => setShowModal(true)}
-                            className="w-full sm:w-auto px-6 py-2.5 mt-2 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white rounded-full font-medium text-sm shadow-[0_0_15px_rgba(var(--color-primary),0.3)] hover:shadow-[0_0_20px_rgba(var(--color-primary),0.5)] border border-primary/50 transition-all duration-300 flex items-center justify-center gap-2 group pointer-events-auto"
+                            className="w-full sm:w-auto px-8 py-3.5 mt-2 bg-primary hover:bg-secondary text-white rounded-xl font-mono font-bold text-xs uppercase tracking-wider shadow-glow border border-primary transition-all duration-300 flex items-center justify-center gap-2 group pointer-events-auto"
                         >
                             <MessageCircle size={16} className="group-hover:scale-110 transition-transform" />
-                            <span>Request</span>
+                            <span>Request Info</span>
                         </button>
                     </motion.div>
                 </div>
@@ -204,17 +204,17 @@ const ProjectDetails = () => {
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.9, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="glass max-w-md w-full p-8 rounded-3xl border border-primary/20 shadow-glow relative overflow-hidden"
+                            className="glass max-w-md w-full p-8 rounded-3xl border-2 border-primary/40 shadow-glow relative overflow-hidden bg-darkcard"
                         >
                             {/* Decorative glows */}
                             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/30 rounded-full blur-[50px]"></div>
 
                             <div className="relative z-10 flex flex-col items-center text-center space-y-6">
-                                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-2">
+                                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-2 border border-primary/30">
                                     <MessageCircle size={32} />
                                 </div>
 
-                                <h3 className="text-2xl font-bold text-white">Contact Request</h3>
+                                <h3 className="text-2xl font-display font-black text-white uppercase tracking-wider">Contact Request</h3>
 
                                 <p className="text-gray-300 text-base">
                                     Do you want to contact us regarding <strong>{project.title}</strong> or not?
@@ -223,7 +223,7 @@ const ProjectDetails = () => {
                                 <div className="flex gap-4 w-full mt-6">
                                     <button
                                         onClick={() => setShowModal(false)}
-                                        className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-all"
+                                        className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-mono font-bold text-xs uppercase tracking-wider transition-all"
                                     >
                                         No, Cancel
                                     </button>
@@ -238,7 +238,7 @@ const ProjectDetails = () => {
                                                 }
                                             }, 500);
                                         }}
-                                        className="w-full py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium shadow-glow hover:shadow-glow-lg transition-all flex items-center justify-center gap-2"
+                                        className="w-full py-3 bg-primary hover:bg-secondary text-white rounded-xl font-mono font-bold text-xs uppercase tracking-wider shadow-glow transition-all flex items-center justify-center gap-2 border border-primary"
                                     >
                                         Yes, Contact
                                         <Mail size={16} />

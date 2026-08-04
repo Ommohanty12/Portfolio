@@ -14,7 +14,7 @@ const Resume = () => {
     ];
 
     return (
-        <section id="resume" className="py-24 relative z-10 pointer-events-auto">
+        <section id="resume" className="py-24 relative z-10 pointer-events-auto bg-grid-pattern">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
@@ -25,12 +25,12 @@ const Resume = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <div className="flex justify-center items-center gap-2 mb-3 text-primary font-mono text-sm uppercase tracking-wider">
-                        <FileText size={16} />
-                        <span>Curriculum Vitae</span>
+                    <div className="inline-flex items-center justify-center gap-2 mb-4 px-3.5 py-1 rounded-md bg-white/5 border border-white/10 text-primary font-mono text-xs font-bold uppercase tracking-widest">
+                        <FileText size={14} />
+                        <span>03 // CURRICULUM VITAE</span>
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
-                        Resume & Background
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">
+                        Resume & <span className="text-primary">Background</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         Explore my professional background, technical expertise, and career accomplishments. Download a copy or view the interactive preview below.
@@ -43,7 +43,7 @@ const Resume = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 relative overflow-hidden shadow-2xl"
+                    className="glass-card rounded-3xl p-6 sm:p-8 border-2 border-white/10 relative overflow-hidden shadow-2xl bg-darkcard/90"
                 >
                     {/* Top Action Bar */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -52,8 +52,8 @@ const Resume = () => {
                                 <Briefcase size={20} />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-white">Om Mohanty's Resume</h3>
-                                <p className="text-xs text-gray-400 font-mono">PDF Document • Up to date</p>
+                                <h3 className="text-lg font-display font-bold text-white uppercase tracking-wide">Om Mohanty's Resume</h3>
+                                <p className="text-xs text-primary font-mono font-bold uppercase tracking-wider">PDF DOCUMENT • 2026 EDITION</p>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@ const Resume = () => {
                             <a
                                 href={resumeUrl}
                                 download="Om_Mohanty_Resume.pdf"
-                                className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium text-sm flex items-center justify-center gap-2 shadow-glow transition-all duration-300 group"
+                                className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-primary hover:bg-secondary text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-glow transition-all duration-300 group border border-primary"
                             >
                                 <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
                                 <span>Download Resume</span>
@@ -71,7 +71,7 @@ const Resume = () => {
                                 href={resumeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300 group"
+                                className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-darker hover:bg-white/10 border border-white/15 text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 group"
                             >
                                 <span>Open in New Tab</span>
                                 <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -95,7 +95,7 @@ const Resume = () => {
                                     <FileText size={32} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-2">Resume Preview</h4>
+                                    <h4 className="text-xl font-bold text-white mb-2 font-display">Resume Preview</h4>
                                     <p className="text-gray-400 text-sm max-w-md">
                                         Inline PDF preview is not supported on this browser/device. You can easily download or open the full resume directly.
                                     </p>
@@ -106,7 +106,7 @@ const Resume = () => {
                                         <div key={index} className="bg-white/5 p-4 rounded-xl border border-white/10 flex items-start gap-3">
                                             <CheckCircle2 size={18} className="text-primary mt-0.5 shrink-0" />
                                             <div>
-                                                <h5 className="text-xs font-mono text-primary uppercase">{item.title}</h5>
+                                                <h5 className="text-xs font-mono text-primary font-bold uppercase tracking-wider">{item.title}</h5>
                                                 <p className="text-sm text-gray-200 mt-1">{item.detail}</p>
                                             </div>
                                         </div>
@@ -117,7 +117,7 @@ const Resume = () => {
                                     <a
                                         href={resumeUrl}
                                         download="Om_Mohanty_Resume.pdf"
-                                        className="px-6 py-3 rounded-xl bg-primary hover:bg-secondary text-white text-sm font-medium transition-all shadow-glow flex items-center gap-2"
+                                        className="px-6 py-3 rounded-xl bg-primary hover:bg-secondary text-white text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-glow flex items-center gap-2 border border-primary"
                                     >
                                         <Download size={16} />
                                         <span>Download PDF</span>

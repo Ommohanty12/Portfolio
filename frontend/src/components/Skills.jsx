@@ -11,7 +11,7 @@ const Skills = () => {
     const displayedSkills = showAll ? skillsData : skillsData.slice(0, INITIAL_COUNT);
 
     return (
-        <section id="skills" className="py-24 relative z-10 pointer-events-auto">
+        <section id="skills" className="py-24 relative z-10 pointer-events-auto bg-grid-pattern">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-16">
                 
                 {/* Left side */}
@@ -22,12 +22,12 @@ const Skills = () => {
                     transition={{ duration: 0.6 }}
                     className="lg:w-1/3 flex flex-col items-start"
                 >
-                    <div className="flex items-center gap-2 mb-3 text-primary font-mono text-sm uppercase tracking-wider">
-                        <Cpu size={16} />
-                        <span>Technical Expertise</span>
+                    <div className="inline-flex items-center justify-center gap-2 mb-4 px-3.5 py-1 rounded-md bg-white/5 border border-white/10 text-primary font-mono text-xs font-bold uppercase tracking-widest">
+                        <Cpu size={14} />
+                        <span>02 // TECHNICAL CAPABILITIES</span>
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-editorial-serif font-bold text-white mb-6 tracking-tight">
-                        Skills & Capabilities
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">
+                        Skills & <span className="text-primary">Stack</span>
                     </h2>
                     <p className="text-gray-400 mb-8 leading-relaxed text-sm sm:text-base">
                         Proficient in full-stack architecture, modern frontend frameworks, cloud databases, microservices, and AI integrations. Engineered for speed, clean abstractions, and maintainable codebases.
@@ -46,15 +46,15 @@ const Skills = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                                    className="glass-card border border-white/10 p-6 rounded-2xl flex flex-col gap-2 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1 shadow-lg"
+                                    className="glass-card border-2 border-white/10 p-6 rounded-2xl flex flex-col gap-2 hover:border-primary transition-all duration-300 group hover:-translate-y-1 shadow-xl bg-darkcard/90"
                                 >
                                     <div className="flex items-center justify-between">
-                                        <h3 className="text-base sm:text-lg text-white font-semibold group-hover:text-primary transition-colors">
+                                        <h3 className="text-base sm:text-lg text-white font-display font-bold group-hover:text-primary transition-colors">
                                             {skill.name}
                                         </h3>
-                                        <CheckCircle2 className="w-5 h-5 text-primary opacity-80 group-hover:opacity-100 transition-opacity shrink-0" />
+                                        <CheckCircle2 className="w-5 h-5 text-primary opacity-90 group-hover:opacity-100 transition-opacity shrink-0" />
                                     </div>
-                                    <p className="text-xs font-mono text-gray-400">
+                                    <p className="text-xs font-mono font-bold text-gray-400 uppercase tracking-wider">
                                         {skill.category}
                                     </p>
                                 </motion.div>
@@ -73,7 +73,7 @@ const Skills = () => {
                         >
                             <button
                                 onClick={() => setShowAll(!showAll)}
-                                className="flex items-center gap-2 px-8 py-3 rounded-full border border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300 group pointer-events-auto shadow-glow font-medium text-sm"
+                                className="flex items-center gap-3 px-8 py-3 rounded-xl border-2 border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 group pointer-events-auto shadow-glow font-mono font-bold text-xs uppercase tracking-wider"
                             >
                                 <span>{showAll ? 'Show Less Capabilities' : 'See More Capabilities'}</span>
                                 {showAll ? (
