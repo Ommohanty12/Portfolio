@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, ExternalLink, Sparkles, Layers } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import projectsData from '../data/projects.json';
+import TiltWrapper from './TiltWrapper';
 
 // Single Project Card Component with Image Carousel
 const ProjectCard = ({ project, index }) => {
@@ -21,13 +22,14 @@ const ProjectCard = ({ project, index }) => {
     };
 
     return (
+        <TiltWrapper className="h-full">
         <motion.div
             layout
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="glass-card rounded-3xl overflow-hidden border-2 border-white/10 flex flex-col justify-between group hover:border-primary transition-all duration-500 shadow-2xl bg-darkcard/90"
+            className="glass-card rounded-3xl overflow-hidden border-2 border-white/10 flex flex-col justify-between group hover:border-primary transition-all duration-500 shadow-2xl bg-darkcard/90 h-full"
         >
             <div>
                 {/* Image Gallery / Carousel Section */}
@@ -156,6 +158,7 @@ const ProjectCard = ({ project, index }) => {
                 </button>
             </div>
         </motion.div>
+        </TiltWrapper>
     );
 };
 

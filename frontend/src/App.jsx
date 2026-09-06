@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import CustomCursor from './components/CustomCursor';
+import Background3DEffect from './components/Background3DEffect';
 import { AnimatePresence } from 'framer-motion';
 import Messages from "./pages/Messages";
 const Home = lazy(() => import('./pages/Home'));
@@ -26,6 +28,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col relative bg-darker text-white font-sans selection:bg-primary selection:text-white overflow-x-hidden w-full max-w-full">
+        <CustomCursor />
+        <Background3DEffect />
         <Navbar />
         <main className="flex-grow z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <Suspense fallback={<LoadingScreen />}>
@@ -39,3 +43,4 @@ function App() {
 }
 
 export default App;
+
