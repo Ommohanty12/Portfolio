@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink, Mail, MessageCircle } from 'lucide-react';
-import projectsData from '../data/projects.json';
+import webProjectsData from '../data/projects.json';
+import aimlProjectsData from '../data/aiml_projects.json';
 
 const ProjectDetails = () => {
     const { id } = useParams();
@@ -13,7 +14,8 @@ const ProjectDetails = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        const proj = projectsData.find(p => p.id === parseInt(id));
+        const allProjects = [...webProjectsData, ...aimlProjectsData];
+        const proj = allProjects.find(p => p.id === parseInt(id));
         if (proj) setProject(proj);
         else navigate('/'); // fallback
     }, [id, navigate]);

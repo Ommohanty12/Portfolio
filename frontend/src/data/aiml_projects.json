@@ -1,0 +1,57 @@
+[
+    {
+        "id": 101,
+        "category": "AI/ML Model & System",
+        "title": "Neural Vision OCR & Document Intelligence",
+        "thumbnail": "/gallery/01/0101.png",
+        "gallery": [
+            "/gallery/01/0101.png",
+            "/gallery/01/0201.png"
+        ],
+        "shortDescription": "An end-to-end computer vision and LLM pipeline for automated document parsing, table extraction, and semantic insights.",
+        "whatItSolves": "Automates complex invoice and contract processing by combining deep learning layout analysis with LLM structured data extraction, reducing manual entry time by 90%.",
+        "fullDescription": "Developed an advanced AI/ML document intelligence platform that processes unstructured PDFs and scanned images using custom YOLO layout detection, TrOCR text recognition, and Gemini/Llama 3 semantic extraction.\n\nThe system automatically parses multi-page documents, detects complex tabular data, extracts key-value pairs, and converts them into standardized JSON formats with real-time confidence scoring and human-in-the-loop validation dashboards.",
+        "techStack": [
+            "Python",
+            "PyTorch",
+            "OpenCV",
+            "Hugging Face",
+            "FastAPI",
+            "Gemini API",
+            "React"
+        ],
+        "skillsUsed": {
+            "Machine Learning": "PyTorch, Computer Vision, LayoutLM, Transformer Models",
+            "Backend & Pipeline": "FastAPI, Celery, Redis, Docker",
+            "Data & Integration": "Gemini API, Structured Data Extraction, Vector Database"
+        },
+        "liveDemo": "https://ommohanty.dev/"
+    },
+    {
+        "id": 102,
+        "category": "AI / RAG Architecture",
+        "title": "Enterprise Knowledge RAG Engine",
+        "thumbnail": "/gallery/02/0201.png",
+        "gallery": [
+            "/gallery/02/0201.png"
+        ],
+        "shortDescription": "A high-precision Retrieval-Augmented Generation (RAG) system with hybrid vector search and reranking for enterprise data.",
+        "whatItSolves": "Eliminates LLM hallucinations when querying internal corporate knowledge bases by combining dense vector embeddings with sparse keyword search and cross-encoder reranking.",
+        "fullDescription": "Engineered a production-ready RAG platform capable of indexing millions of internal documentation files, codebases, and customer support tickets.\n\nImplemented hybrid retrieval using Qdrant vector database and BM25, coupled with Cohere reranking for maximum context relevance. Built an interactive React dashboard with citation tracking, source attribution, and fine-grained access control permissions.",
+        "techStack": [
+            "Python",
+            "LangChain",
+            "Qdrant",
+            "FastAPI",
+            "React",
+            "Tailwind CSS",
+            "OpenAI API"
+        ],
+        "skillsUsed": {
+            "AI Engineering": "RAG Architecture, Vector Embeddings, Hybrid Search, Reranking",
+            "Backend": "Python, FastAPI, Async Queue",
+            "Frontend": "React, Tailwind CSS, Interactive Citation Viewer"
+        },
+        "liveDemo": "https://ommohanty.dev/"
+    }
+]
